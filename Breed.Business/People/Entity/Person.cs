@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Breed.Business.People.Entity
 {
@@ -13,7 +10,12 @@ namespace Breed.Business.People.Entity
         public DateTime? Birthdate { get; set; }
         public bool Deceased { get; set; }
 
-        //public Person Mother { get; set; }
-        //public Person Father { get; set; }
+        public int? MotherId { get; set; }
+        public virtual Person Mother { get; set; }
+
+        public int? FatherId { get; set; }
+        public virtual Person Father { get; set; }
+
+        //public virtual IEnumerable<Person> Children { get; set; }
     }
 }

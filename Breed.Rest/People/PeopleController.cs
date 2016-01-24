@@ -50,5 +50,19 @@ namespace Breed.Rest.People
         {
             _peopleFacade.Delete(id);
         }
+
+        [HttpPost]
+        [Route("{id}/setmother/{motherId}")]
+        public PersonDto SetMother(int id, int motherId)
+        {
+            return _peopleFacade.SetMother(id, motherId);
+        }
+
+        [HttpPost]
+        [Route("{id}/setfather/{fatherId}")]
+        public PersonDto SetFather(int id, int fatherId)
+        {
+            return _peopleFacade.SetFather(id, fatherId);
+        }
     }
 }

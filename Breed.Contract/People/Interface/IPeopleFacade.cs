@@ -10,5 +10,7 @@ namespace Breed.Contract.People.Interface
         PersonDto Create(PersonDto person);
         PersonDto Update(PersonDto person);
         void Delete(int id);
+        PersonDto SetMother(int id, int motherId);
+        PersonDto SetFather(int id, int fatherId);
     }
 }

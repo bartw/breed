@@ -31,5 +31,15 @@ namespace Breed.Contract.People.Client
         {
             throw new NotImplementedException();
         }
+
+        public PersonDto SetMother(int id, int motherId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PersonDto SetFather(int id, int fatherId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

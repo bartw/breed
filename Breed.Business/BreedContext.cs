@@ -21,6 +21,11 @@ namespace Breed.Business
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.Mother).WithMany().HasForeignKey(p => p.MotherId);
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.Father).WithMany().HasForeignKey(p => p.FatherId);
         }
     }
 }

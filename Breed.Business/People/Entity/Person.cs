@@ -13,7 +13,7 @@ namespace Breed.Business.People.Entity
         public DateTime? Birthdate { get; set; }
         public bool Deceased { get; set; }
 
-        public Person Mother { get; set; }
-        public Person Father { get; set; }
+        //public Person Mother { get; set; }
+        //public Person Father { get; set; }
     }
 }
